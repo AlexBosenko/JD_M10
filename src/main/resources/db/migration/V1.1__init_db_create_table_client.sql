@@ -1,0 +1,5 @@
+CREATE TABLE client (
+    id INT GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(200) NOT NULL CHECK (LENGTH(name) >= 3 AND LENGTH(name) <= 200),
+    PRIMARY KEY (id)
+);
