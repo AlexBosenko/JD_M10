@@ -1,14 +1,11 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
-import lombok.ToString;
-import lombok.Data;
-import org.hibernate.annotations.Generated;
 
 
 @Entity
-@Table(name="client")
-public class Client {
+@Table(name="klient")
+public class Klient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -17,6 +14,10 @@ public class Client {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     @Override

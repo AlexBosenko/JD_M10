@@ -1,7 +1,7 @@
-INSERT INTO planet (name)
+INSERT INTO planet (id, name)
 VALUES
-    ('Venus'),
-    ('Mars'),
-    ('Saturn'),
-    ('Jupiter'),
-    ('Neptune')
+    ('VEN1', 'Venus'),
+    ('MARS', 'Mars'),
+    ('SAT77', 'Saturn'),
+    ('JUP4', 'Jupiter'),
+    ('NEPT', 'Neptune')

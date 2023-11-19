@@ -1,4 +1,4 @@
-INSERT INTO client (name)
+INSERT INTO klient (name)
 VALUES
     ('Peter Quill'), -- id 1
     ('Peter Parker'), -- id 2

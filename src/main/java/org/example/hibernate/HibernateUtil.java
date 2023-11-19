@@ -1,6 +1,5 @@
 package org.example.hibernate;
 
-import lombok.Getter;
 import org.example.entity.*;
 import org.example.properties.PropertyReader;
 import org.flywaydb.core.Flyway;
@@ -26,7 +25,7 @@ public class HibernateUtil {
         flyway.migrate();
 
         sessionFactory = new Configuration()
-                .addAnnotatedClass(Client.class)
+                .addAnnotatedClass(Klient.class)
                 .addAnnotatedClass(Planet.class)
                 .buildSessionFactory();
     }
