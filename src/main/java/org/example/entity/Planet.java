@@ -3,7 +3,7 @@ package org.example.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="planet")
+@Table(name = "planet")
 public class Planet {
     @Id
     private String id;
@@ -12,6 +12,10 @@ public class Planet {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public void setName(String name) {

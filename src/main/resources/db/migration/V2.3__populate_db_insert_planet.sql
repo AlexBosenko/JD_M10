@@ -1,4 +1,4 @@
-INSERT INTO ticket(created_at, klient_id, from_planet_id, to_planet_id)
+INSERT INTO ticket(created_at, client_id, from_planet_id, to_planet_id)
 VALUES
     ('2012-03-01'::TIMESTAMP, 1, 'MARS', 'VEN1'),
     ('2015-04-28'::TIMESTAMP, 2, 'VEN1', 'NEPT'),

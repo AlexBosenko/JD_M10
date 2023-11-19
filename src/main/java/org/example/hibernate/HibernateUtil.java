@@ -8,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 
 public class HibernateUtil {
     private static final HibernateUtil INSTANCE;
+
     static {
         INSTANCE = new HibernateUtil();
     }
@@ -25,7 +26,7 @@ public class HibernateUtil {
         flyway.migrate();
 
         sessionFactory = new Configuration()
-                .addAnnotatedClass(Klient.class)
+                .addAnnotatedClass(Client.class)
                 .addAnnotatedClass(Planet.class)
                 .buildSessionFactory();
     }
