@@ -12,8 +12,8 @@ public class HibernateUtil {
     static {
         INSTANCE = new HibernateUtil();
     }
-    @Getter
-    private SessionFactory sessionFactory;
+
+    private static SessionFactory sessionFactory;
 
     private HibernateUtil() {
         String url = PropertyReader.getInstance().getConnectionUrl();
@@ -27,11 +27,16 @@ public class HibernateUtil {
 
         sessionFactory = new Configuration()
                 .addAnnotatedClass(Client.class)
+                .addAnnotatedClass(Planet.class)
                 .buildSessionFactory();
     }
 
-    public static HibernateUtil getINSTANCE() {
+    public static HibernateUtil getInstance() {
         return INSTANCE;
+    }
+
+    public SessionFactory getSessionFactory() {
+        return sessionFactory;
     }
 
     public void close() {
